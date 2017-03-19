@@ -4,8 +4,20 @@
     <artifactId>multi</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <name>multi</name>
-    <modules>
+    <distributionManagement>
+        <repository>
+            <id>Nexus</id>
+            <name>Nexus Releases</name>
+            <url>http://34.204.255.249:8081/nexus/content/repositories/releases/</url>
+         </repository>
+        <snapshotRepository>
+            <id>Nexus</id>
+            <name>Nexus Snapshots</name>
+            <url>http://34.204.255.249:8081/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>
+      </distributionManagement>
+         <name>multi</name>
+     <modules>
         <module>core</module>
         <module>app</module>
     </modules>
