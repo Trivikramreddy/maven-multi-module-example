@@ -24,7 +24,7 @@
     </modules>
     <profiles>
         <profile>
-            <id>release</id>
+            <id>snapshots</id>
             <build>
                 <plugins>
                     <plugin>
