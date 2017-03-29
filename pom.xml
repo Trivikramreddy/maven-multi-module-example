@@ -2,26 +2,28 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.jamesward</groupId>
     <artifactId>multi</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>pom</packaging>
     <distributionManagement>
-        
+        <repository>
+            <id>nexus</id>
+            <name>Internal Releases</name>
+            <url>http://54.197.6.41:8081/nexus/content/repositories/releases/</url>
+        </repository>
         <snapshotRepository>
-            <id>snapshots</id>
-            <name>Nexus Snapshots</name>
-            <url>http://54.197.6.41:8081/nexus/content/repositories/snapshots</url>
+            <id>nexus</id>
+            <name>Internal Snapshots</name>
+            <url>http://54.197.6.41:8081/nexus/content/repositories/snapshots/</url>
         </snapshotRepository>
       </distributionManagement>
-    
-    <name>multi</name>
-    <url>http://maven.apache.org</url>
+     <name>multi</name>
     <modules>
         <module>core</module>
         <module>app</module>
     </modules>
     <profiles>
         <profile>
-            <id>snapshots</id>
+            <id>release</id>
             <build>
                 <plugins>
                     <plugin>
